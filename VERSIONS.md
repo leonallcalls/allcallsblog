@@ -1,15 +1,16 @@
-# AllCalls Journal versions
+# AllCalls Blog versions
 
 | Snapshot | Checkout |
 | --- | --- |
-| `v1-static-copy` | `~/Software/allblogs` on `main`, the GitHub Pages version |
+| `v1-static-copy` | `~/Software/allblogs` the original static copy |
 | `v2-v1` | `~/Software/allblogs-v2` on `v2`, the first editorial redesign |
-| `v2-v2` | `~/Software/allblogs-v2-next` on `v2-next`, the cover and navigation revision |
+| `v2-v2` / `v2.0` | `~/Software/allblogs-v2-next` on `v2-next`, the cover and navigation revision |
+| `v3.0` | `~/Software/allblogs-v3` on `v3`, the Blog branding and image revision |
 
 Each tag points to a complete commit. Each checkout contains the full static site. Open its `index.html` or serve the folder root with a static server. To start the next version as a separate editable copy, run this from either checkout.
 
 ```sh
-git worktree add -b v2-third ~/Software/allblogs-v2-third v2-v2
+git worktree add -b v3-next ~/Software/allblogs-v3-next v3.0
 ```
 
 The v2 canonical URLs, social URLs, structured data and sitemap target `https://leonallcalls.github.io/allcallsblog/`. Use the chosen production base consistently across these values if the site moves. The source Google tag is `GT-5DDM24S` and the source linker domain is `blog.allcalls.io`. The new stories carry July–November edition dates. Their structured publication date reflects when the new articles were prepared on November 25.
