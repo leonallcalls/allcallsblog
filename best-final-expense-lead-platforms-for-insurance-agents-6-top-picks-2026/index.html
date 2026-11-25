@@ -144,6 +144,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -161,7 +162,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Platform comparisons</p>
           <h1>Best Final Expense Lead Platforms for Insurance Agents: 6 Top Picks 2026</h1>
 
@@ -509,13 +510,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>A buffer is a pre-determined amount of time (usually 30 to 120 seconds) that an agent can speak to a caller before they are charged for the lead. This allows the agent to qualify the prospect and ensure they are actually looking for Final Expense coverage before the lead is billed.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../inbound-insurance-lead-cost-per-issued-policy/index.html">
-            <span>Newer article</span>What an inbound insurance call really costs
+          <a class="story-nav-link story-nav-newer" href="../inbound-insurance-lead-cost-per-issued-policy/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>What an inbound insurance call really costs</strong></span>
           </a>
-          <a class="story-nav-link" href="../pay-per-call-vs-monthly-lead-subscriptions-which-lead-model-is-better-for-solo-a/index.html">
-            <span>Older article</span>Pay-Per-Call vs. Monthly Lead Subscriptions: Which Lead Model Is Better for Solo Agents? 2026
+          <a class="story-nav-link story-nav-older" href="../pay-per-call-vs-monthly-lead-subscriptions-which-lead-model-is-better-for-solo-a/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>Pay-Per-Call vs. Monthly Lead Subscriptions: Which Lead Model Is Better for Solo Agents? 2026</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

@@ -99,6 +99,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -116,7 +117,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Medicare &amp; ACA</p>
           <h1>What to do when the Marketplace asks for income documents</h1>
           <p class="post-deck">For a household with variable pay, a Marketplace notice can be hard to translate into a next step. Start with the exact request and the deadline on the letter.</p>
@@ -138,13 +139,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>End with a plain recap. Name the document, where the consumer will upload it, and when they will check that the Marketplace received it. If you schedule a follow-up, record the date in your approved system. Keep the notice date visible in that handoff so a colleague can help without making the caller repeat the story.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../2027-medicare-aca-open-enrollment-deadlines/index.html">
-            <span>Newer article</span>2027 open enrollment has two clocks
+          <a class="story-nav-link story-nav-newer" href="../2027-medicare-aca-open-enrollment-deadlines/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>2027 open enrollment has two clocks</strong></span>
           </a>
-          <a class="story-nav-link" href="../aca-open-enrollment-intake-checklist-2027/index.html">
-            <span>Older article</span>A calmer first call for ACA open enrollment
+          <a class="story-nav-link story-nav-older" href="../aca-open-enrollment-intake-checklist-2027/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>A calmer first call for ACA open enrollment</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

@@ -143,6 +143,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -160,7 +161,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Lead generation</p>
           <h1>Is Inbound Final Expense Call Lead Generation Worth It? 2026 Cost, Benefits, and Verdict</h1>
 
@@ -432,13 +433,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>Yes, professional platforms like AllCalls.io allow agents to toggle their availability on or off instantly. This &#8216;on-demand&#8217; feature is ideal for agents who want to control their schedule without being tied to a specific lead delivery window or long-term contract.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../why-browser-notifications-fail-5-solutions-that-work/index.html">
-            <span>Newer article</span>Why Browser Notifications Fail? 5 Solutions That Work
+          <a class="story-nav-link story-nav-newer" href="../why-browser-notifications-fail-5-solutions-that-work/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>Why Browser Notifications Fail? 5 Solutions That Work</strong></span>
           </a>
-          <a class="story-nav-link" href="../is-pay-per-call-medicare-lead-generation-worth-it-2026-cost-benefits-and-verdict/index.html">
-            <span>Older article</span>Is Pay-Per-Call Medicare Lead Generation Worth It? 2026 Cost, Benefits, and Verdict
+          <a class="story-nav-link story-nav-older" href="../is-pay-per-call-medicare-lead-generation-worth-it-2026-cost-benefits-and-verdict/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>Is Pay-Per-Call Medicare Lead Generation Worth It? 2026 Cost, Benefits, and Verdict</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

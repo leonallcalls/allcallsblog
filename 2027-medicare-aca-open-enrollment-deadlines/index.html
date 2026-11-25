@@ -99,6 +99,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -116,7 +117,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Medicare &amp; ACA</p>
           <h1>2027 open enrollment has two clocks</h1>
           <p class="post-deck">Medicare open enrollment ends December 7. On HealthCare.gov, December 15 is the cutoff for January 1 coverage. For one household, that distinction can change when coverage starts.</p>
@@ -139,10 +140,11 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>Official dates appear in the <a href="https://www.cms.gov/newsroom/press-releases/medicare-advantage-medicare-prescription-drug-programs-expected-remain-stable-2027">CMS 2027 Medicare enrollment announcement</a> and the <a href="https://www.healthcare.gov/quick-guide/dates-and-deadlines/">HealthCare.gov calendar</a>.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../aca-marketplace-income-verification-2027/index.html">
-            <span>Older article</span>What to do when the Marketplace asks for income documents
+          <a class="story-nav-link story-nav-older" href="../aca-marketplace-income-verification-2027/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>What to do when the Marketplace asks for income documents</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

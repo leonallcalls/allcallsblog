@@ -290,19 +290,58 @@ figure { margin: 0; }
   border-top: 1px solid var(--line);
 }
 .story-nav-link {
-  display: flex;
-  flex-direction: column;
-  gap: .3rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: .9rem;
   min-width: 0;
-  height: 100%;
-  padding: .8rem 1rem;
+  padding: 1rem;
   border: 1px solid var(--line);
-  border-radius: .25rem;
+  border-radius: .55rem;
+  background: var(--white);
   color: var(--ink);
   text-decoration: none;
 }
-.story-nav-link:hover { border-color: var(--rust); text-decoration: underline; }
-.story-nav-link span { color: var(--rust); font-size: .84rem; font-weight: 700; }
+.story-nav-older { grid-template-columns: minmax(0, 1fr) auto; }
+.story-nav-older .story-nav-icon { grid-column: 2; grid-row: 1; }
+.story-nav-older .story-nav-copy { grid-column: 1; grid-row: 1; }
+.story-nav-link:hover { border-color: var(--pine); background: var(--soft); }
+.story-nav-label { display: block; margin-bottom: .25rem; color: var(--rust); font-size: .84rem; font-weight: 700; }
+.story-nav-copy strong { display: block; font: 600 1.18rem/1.22 var(--serif); }
+.story-nav-icon {
+  display: grid;
+  place-items: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--pine);
+}
+.story-nav-link:hover .story-nav-icon { background: var(--pine); color: white; }
+.story-nav-archive { grid-column: 1 / -1; justify-self: center; padding-top: .45rem; }
+.browse-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  min-height: 2.9rem;
+  padding: .55rem 1.05rem;
+  border: 1px solid var(--pine);
+  border-radius: .4rem;
+  background: var(--pine);
+  color: white;
+  font-size: .9rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+.browse-button:hover { background: var(--ink); color: white; }
+.browse-button-small { color: var(--pine); background: var(--white); }
+.browse-button-small:hover { background: var(--pine); }
+.feature-tools { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.2rem; margin-top: .75rem; }
+.feature-tools .feature-controls { flex: 1 1 20rem; margin: 0; }
+.feature-tools .browse-button { margin-inline-start: auto; }
+.feature-buttons button span { color: inherit; }
+#archive-title:focus { outline: none; }
 
 .site-footer { color: #fff; background: #031635; font-size: .9rem; }
 .site-footer a { color: inherit; font-weight: 650; }
@@ -331,7 +370,7 @@ figure { margin: 0; }
 }
 
 @media print {
-  .site-header, .site-footer, .skip-link, .back-link, .post-end { display: none; }
+  .site-header, .site-footer, .skip-link, .browse-button, .post-end { display: none; }
   .post-heading { background: #fff; }
   .shell { width: 100%; }
   .post-content table { min-width: 0; }
@@ -360,21 +399,34 @@ figure { margin: 0; }
   color: #bacade;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition { navigation: auto; }
+@view-transition { navigation: auto; }
 
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-group(*) { animation-duration: 0s !important; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
   .site-header { view-transition-name: blog-header; }
 
-  ::view-transition-group(root) { animation-duration: 240ms; }
-  ::view-transition-old(root) { animation: 125ms ease-in both blog-fade-out; }
-  ::view-transition-new(root) { animation: 240ms cubic-bezier(.2, .65, .3, 1) both blog-enter; }
+  :root { --page-shift-x: clamp(1.25rem, 7vw, 4.5rem); --page-shift-y: 0px; }
+  :root:active-view-transition-type(backward) { --page-shift-x: clamp(-4.5rem, -7vw, -1.25rem); }
+  :root:active-view-transition-type(archive) { --page-shift-x: 0px; --page-shift-y: 2.5rem; }
+
+  ::view-transition-group(root) { animation-duration: 340ms; }
+  ::view-transition-image-pair(root) { isolation: isolate; }
+  ::view-transition-old(root) { animation: 215ms ease-in both blog-slide-out; }
+  ::view-transition-new(root) { animation: 340ms cubic-bezier(.2, .75, .25, 1) both blog-slide-in; }
   ::view-transition-group(blog-header) { animation-duration: 180ms; }
 }
 
-@keyframes blog-fade-out {
-  to { opacity: 0; }
+@keyframes blog-slide-out {
+  to {
+    opacity: 0;
+    transform: translate(calc(var(--page-shift-x) * -.45), calc(var(--page-shift-y) * -.45));
+  }
 }
-@keyframes blog-enter {
-  from { opacity: 0; transform: translateY(7px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes blog-slide-in {
+  from { opacity: .25; transform: translate(var(--page-shift-x), var(--page-shift-y)); }
+  to { opacity: 1; transform: translate(0, 0); }
 }

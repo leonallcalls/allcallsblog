@@ -6,11 +6,12 @@
 | `v2-v1` | `~/Software/allblogs-v2` on `v2`, the first editorial redesign |
 | `v2-v2` / `v2.0` | `~/Software/allblogs-v2-next` on `v2-next`, the cover and navigation revision |
 | `v3.0` | `~/Software/allblogs-v3` on `v3`, the Blog branding and image revision |
+| `v4.0` | `~/Software/allblogs-v4` on `v4`, the directional navigation and documentary cover revision |
 
 Each tag points to a complete commit. Each checkout contains the full static site. Open its `index.html` or serve the folder root with a static server. To start the next version as a separate editable copy, run this from either checkout.
 
 ```sh
-git worktree add -b v3-next ~/Software/allblogs-v3-next v3.0
+git worktree add -b v4-next ~/Software/allblogs-v4-next v4.0
 ```
 
 The v2 canonical URLs, social URLs, structured data and sitemap target `https://leonallcalls.github.io/allcallsblog/`. Use the chosen production base consistently across these values if the site moves. The source Google tag is `GT-5DDM24S` and the source linker domain is `blog.allcalls.io`. The new stories carry July–November edition dates. Their structured publication date reflects when the new articles were prepared on November 25.
@@ -25,3 +26,5 @@ The built-in ImageGen tool generated these illustrative scenes. The people and l
 - `assets/editorial/tucson-agent.jpg` — One landscape 3:2 documentary editorial photograph for AllCalls insurance agent journal. Tucson, Arizona independent insurance agent, a Latino man in his late 30s with a trimmed beard and dark green shirt, seated in an ordinary modest storefront office thoughtfully listening on a corded or headset telephone, nearby window catches blurred stucco buildings and late afternoon desert light. Hands natural, believable unbranded working environment. Warm soft light, quiet concentration, inviting cedar and sage palette. Realistic magazine photography. No text, no brands, no watermarks, no staged smiles.
 
 The cover and navigation revision has its own [cover sources and ImageGen prompts](COVER-SOURCES.md).
+
+The directional View Transitions use same-origin HTTP(S) navigation. For a local motion preview, serve the v4 folder with `python3 -m http.server 8769 --bind 127.0.0.1` and open `http://127.0.0.1:8769/` in a browser with cross-document View Transitions.

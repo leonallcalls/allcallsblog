@@ -99,6 +99,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -116,7 +117,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Medicare &amp; ACA</p>
           <h1>A calmer first call for ACA open enrollment</h1>
           <p class="post-deck">A 2027 Marketplace intake checklist for insurance agents covering state, household changes, plan priorities, and a clear next step.</p>
@@ -139,13 +140,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>Before ending the call, agree on a next action and repeat it in a sentence the caller can use with a family member. For Marketplace assistance, use your approved process to document consumer consent and their review of application accuracy where required. The <a href="https://www.cms.gov/marketplace/agents-brokers/files/cms-model-consent-form-marketplace-agents-brokers.pdf">CMS model consent form</a> describes both steps. Track completion separately from the call outcome so nobody confuses a good conversation with a finished application.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../aca-marketplace-income-verification-2027/index.html">
-            <span>Newer article</span>What to do when the Marketplace asks for income documents
+          <a class="story-nav-link story-nav-newer" href="../aca-marketplace-income-verification-2027/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>What to do when the Marketplace asks for income documents</strong></span>
           </a>
-          <a class="story-nav-link" href="../2027-medicare-plan-comparison-checklist/index.html">
-            <span>Older article</span>The 2027 Medicare plan check starts with the medicine cabinet
+          <a class="story-nav-link story-nav-older" href="../2027-medicare-plan-comparison-checklist/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>The 2027 Medicare plan check starts with the medicine cabinet</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

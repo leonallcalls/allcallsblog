@@ -99,6 +99,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -116,7 +117,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Agency operations</p>
           <h1>Staff for the calls your team can finish</h1>
           <p class="post-deck">An open enrollment call staffing plan for small insurance agencies, with a practical approach to capacity, overflow, and callbacks.</p>
@@ -138,13 +139,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>Review abandoned calls, missed callbacks, and unresolved cases at the end of the day. These show what happens after the phone rings. When a case carries over, give it an owner and a next action before opening more call availability. A short <a href="../insurance-call-callback-handoff/index.html">callback handoff note</a> makes that ownership clear. A short check with the team the next morning can tell you whether the issue was understaffing, a routing mistake, or a question that needed better training.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../medicare-annual-notice-of-change-checklist/index.html">
-            <span>Newer article</span>The Medicare letter worth opening before October
+          <a class="story-nav-link story-nav-newer" href="../medicare-annual-notice-of-change-checklist/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>The Medicare letter worth opening before October</strong></span>
           </a>
-          <a class="story-nav-link" href="../insurance-call-callback-handoff/index.html">
-            <span>Older article</span>The callback note that keeps a caller from starting over
+          <a class="story-nav-link story-nav-older" href="../insurance-call-callback-handoff/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>The callback note that keeps a caller from starting over</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

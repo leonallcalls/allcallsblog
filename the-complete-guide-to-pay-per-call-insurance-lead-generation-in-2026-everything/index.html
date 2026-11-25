@@ -143,6 +143,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -160,7 +161,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">How-to guides</p>
           <h1>The Complete Guide to Pay-Per-Call Insurance Lead Generation in 2026: Everything You Need to Know</h1>
 
@@ -339,13 +340,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>No specialized hardware is required. You can route calls to your mobile phone, a landline, or your existing agency VOIP system.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../inbound-insurance-lead-generation-guide/index.html">
-            <span>Newer article</span>The Complete Guide to Inbound Insurance Lead Generation for Modern Agents in 2026: Everything You Need to Know
+          <a class="story-nav-link story-nav-newer" href="../inbound-insurance-lead-generation-guide/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>The Complete Guide to Inbound Insurance Lead Generation for Modern Agents in 2026: Everything You Need to Know</strong></span>
           </a>
-          <a class="story-nav-link" href="../inbound-insurance-calls-vs-shared-data-leads-which-lead-type-is-better-for-lowes/index.html">
-            <span>Older article</span>Inbound Insurance Calls vs. Shared Data Leads: Which Lead Type Is Better for Lowest CPA? 2026
+          <a class="story-nav-link story-nav-older" href="../inbound-insurance-calls-vs-shared-data-leads-which-lead-type-is-better-for-lowes/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>Inbound Insurance Calls vs. Shared Data Leads: Which Lead Type Is Better for Lowest CPA? 2026</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

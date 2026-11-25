@@ -143,6 +143,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -160,7 +161,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">Lead generation</p>
           <h1>Is Pay-Per-Call Final Expense Lead Generation Worth It? 2026 Cost, Benefits, and Verdict</h1>
 
@@ -310,13 +311,15 @@ Pay-per-call Final Expense lead generation is a highly profitable &quot;accelera
 <p>Most modern platforms like AllCalls.io do not require long-term contracts. They operate on a pay-per-call basis where you fund your account and only pay for the leads you actually receive.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../best-inbound-call-platforms-for-final-expense-agents-5-top-picks-2026/index.html">
-            <span>Newer article</span>Best Inbound Call Platforms for Final Expense Agents: 5 Top Picks 2026
+          <a class="story-nav-link story-nav-newer" href="../best-inbound-call-platforms-for-final-expense-agents-5-top-picks-2026/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>Best Inbound Call Platforms for Final Expense Agents: 5 Top Picks 2026</strong></span>
           </a>
-          <a class="story-nav-link" href="../inbound-insurance-lead-generation-guide/index.html">
-            <span>Older article</span>The Complete Guide to Inbound Insurance Lead Generation for Modern Agents in 2026: Everything You Need to Know
+          <a class="story-nav-link story-nav-older" href="../inbound-insurance-lead-generation-guide/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>The Complete Guide to Inbound Insurance Lead Generation for Modern Agents in 2026: Everything You Need to Know</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

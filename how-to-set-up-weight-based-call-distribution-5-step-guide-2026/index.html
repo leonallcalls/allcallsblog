@@ -143,6 +143,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="../navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -160,7 +161,7 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
     <article>
       <header class="post-heading">
         <div class="shell reading-width">
-          <a class="back-link" href="../index.html#articles">Browse all articles</a>
+          <a class="browse-button browse-button-small" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a>
           <p class="eyebrow">How-to guides</p>
           <h1>How to Set Up Weight-Based Call Distribution: 5-Step Guide 2026</h1>
 
@@ -269,13 +270,15 @@ gtag("config", "GT-5DDM24S", {"googlesitekit_post_type":"post"});
 <p>While weights prioritize certain agents, &#8216;Priority&#8217; usually acts as a hard tier. A Priority 1 agent will always receive a call before a Priority 2 agent. Weighting is better for sharing volume among a group, while Priority is better for absolute hierarchies.</p>
         </div>
         <nav class="post-end" aria-label="Article navigation">
-          <a class="story-nav-link" href="../inbound-call-platforms-vs-outbound-auto-dialers-which-lead-strategy-is-better-fo/index.html">
-            <span>Newer article</span>Inbound Call Platforms vs. Outbound Auto-Dialers: Which Lead Strategy Is Better for Final Expense? 2026
+          <a class="story-nav-link story-nav-newer" href="../inbound-call-platforms-vs-outbound-auto-dialers-which-lead-strategy-is-better-fo/index.html" data-story-direction="newer">
+            <span class="story-nav-icon" aria-hidden="true">←</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Newer article</span><strong>Inbound Call Platforms vs. Outbound Auto-Dialers: Which Lead Strategy Is Better for Final Expense? 2026</strong></span>
           </a>
-          <a class="story-nav-link" href="../best-crm-integrations-for-insurance-agents-5-top-picks-2026/index.html">
-            <span>Older article</span>Best CRM Integrations for Insurance Agents: 5 Top Picks 2026
+          <a class="story-nav-link story-nav-older" href="../best-crm-integrations-for-insurance-agents-5-top-picks-2026/index.html" data-story-direction="older">
+            <span class="story-nav-icon" aria-hidden="true">→</span>
+            <span class="story-nav-copy"><span class="story-nav-label">Older article</span><strong>Best CRM Integrations for Insurance Agents: 5 Top Picks 2026</strong></span>
           </a>
-          <div><a class="back-link" href="../index.html#articles">Browse all articles</a></div>
+          <div class="story-nav-archive"><a class="browse-button" href="../index.html#articles" data-browse-articles><span aria-hidden="true">←</span> Browse all articles</a></div>
         </nav>
       </div>
     </article>

@@ -86,6 +86,7 @@ gtag("config", "GT-5DDM24S");
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
+  <script src="navigation.js" blocking="render"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -183,7 +184,7 @@ gtag("config", "GT-5DDM24S");
             <a class="feature-link" href="insurance-call-callback-handoff/index.html" aria-describedby="feature-6">Read the story</a>
           </div>
           <figure class="feature-visual">
-            <img src="assets/covers/handoff.jpg" srcset="assets/covers/handoff-640.jpg 640w, assets/covers/handoff.jpg 1440w" sizes="(max-width: 704px) 94vw, (max-width: 1400px) 55vw, 735px" alt="Two headsets and a folded handoff note share an agency desk." width="1440" height="960" loading="lazy" decoding="async">
+            <img src="assets/v4/insurance-call-callback-handoff.jpg" srcset="assets/v4/insurance-call-callback-handoff-640.jpg 640w, assets/v4/insurance-call-callback-handoff.jpg 1440w" sizes="(max-width: 704px) 94vw, (max-width: 1400px) 55vw, 735px" alt="Two colleagues pass a folded callback note over a desk." width="1440" height="960" loading="lazy" decoding="async">
             <figcaption>Tucson, Arizona</figcaption>
           </figure>
         </article>
@@ -195,23 +196,26 @@ gtag("config", "GT-5DDM24S");
             <a class="feature-link" href="inbound-insurance-lead-cost-per-issued-policy/index.html" aria-describedby="feature-7">Read the story</a>
           </div>
           <figure class="feature-visual">
-            <img src="assets/covers/receipts.jpg" srcset="assets/covers/receipts-640.jpg 640w, assets/covers/receipts.jpg 1440w" sizes="(max-width: 704px) 94vw, (max-width: 1400px) 55vw, 735px" alt="A pencil, calculator, and paper receipts on a work table." width="1440" height="960" loading="lazy" decoding="async">
+            <img src="assets/v4/inbound-insurance-lead-cost-per-issued-policy.jpg" srcset="assets/v4/inbound-insurance-lead-cost-per-issued-policy-640.jpg 640w, assets/v4/inbound-insurance-lead-cost-per-issued-policy.jpg 1440w" sizes="(max-width: 704px) 94vw, (max-width: 1400px) 55vw, 735px" alt="Hands compare a receipt and a tally sheet next to a calculator." width="1440" height="960" loading="lazy" decoding="async">
             <figcaption>Tucson, Arizona</figcaption>
           </figure>
         </article>
         </div>
-        <div class="feature-controls" hidden>
-          <p class="feature-position">Story 1 of 8</p>
-          <p class="feature-announcement visually-hidden" role="status"></p>
-          <div class="feature-buttons">
-            <button class="control-button" type="button" aria-controls="feature-track" data-newer>Newer story</button>
-            <button class="control-button" type="button" aria-controls="feature-track" data-older>Older story</button>
+        <div class="feature-tools">
+          <div class="feature-controls" hidden>
+            <p class="feature-position">Story 1 of 8</p>
+            <p class="feature-announcement visually-hidden" role="status"></p>
+            <div class="feature-buttons">
+              <button class="control-button" type="button" aria-controls="feature-track" data-newer><span aria-hidden="true">←</span> Newer story</button>
+              <button class="control-button" type="button" aria-controls="feature-track" data-older>Older story <span aria-hidden="true">→</span></button>
+            </div>
           </div>
+          <a class="browse-button" href="#articles" data-browse-articles>Browse all articles <span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
     <section class="shell archive" id="articles" aria-labelledby="archive-title">
-      <h2 id="archive-title">Browse all articles</h2>
+      <h2 id="archive-title" tabindex="-1">Browse all articles</h2>
       <p class="archive-summary">Enrollment, lead generation, and the daily work of insurance agencies.</p>
       <form class="archive-controls" role="search" aria-label="Search the article archive" hidden>
         <div class="archive-fields">
@@ -299,7 +303,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Agency operations">
           <a class="card-link" href="insurance-call-callback-handoff/index.html">
-            <div class="card-photo"><img src="assets/covers/handoff.jpg" srcset="assets/covers/handoff-640.jpg 640w, assets/covers/handoff.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/insurance-call-callback-handoff.jpg" srcset="assets/v4/insurance-call-callback-handoff-640.jpg 640w, assets/v4/insurance-call-callback-handoff.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Agency operations</span><time datetime="2026-08-13">Aug 13, 2026</time></p>
               <h3>The callback note that keeps a caller from starting over</h3>
@@ -309,7 +313,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Lead generation">
           <a class="card-link" href="inbound-insurance-lead-cost-per-issued-policy/index.html">
-            <div class="card-photo"><img src="assets/covers/receipts.jpg" srcset="assets/covers/receipts-640.jpg 640w, assets/covers/receipts.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/inbound-insurance-lead-cost-per-issued-policy.jpg" srcset="assets/v4/inbound-insurance-lead-cost-per-issued-policy-640.jpg 640w, assets/v4/inbound-insurance-lead-cost-per-issued-policy.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Lead generation</span><time datetime="2026-07-21">Jul 21, 2026</time></p>
               <h3>What an inbound insurance call really costs</h3>
@@ -359,7 +363,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Insurance sales">
           <a class="card-link" href="best-insurance-verticals-for-new-inbound-pay-per-call-agents-6-top-picks-2026/index.html">
-            <div class="card-photo"><img src="assets/v3/story-3.jpg" srcset="assets/v3/story-3-640.jpg 640w, assets/v3/story-3.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/best-insurance-verticals-for-new-inbound-pay-per-call-agents-6-top-picks-2026.jpg" srcset="assets/v4/best-insurance-verticals-for-new-inbound-pay-per-call-agents-6-top-picks-2026-640.jpg 640w, assets/v4/best-insurance-verticals-for-new-inbound-pay-per-call-agents-6-top-picks-2026.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Insurance sales</span><time datetime="2026-04-29">Apr 29, 2026</time></p>
               <h3>Best Insurance Verticals for New Inbound Pay-Per-Call Agents: 6 Top Picks 2026</h3>
@@ -389,7 +393,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="How-to guides">
           <a class="card-link" href="why-browser-notifications-fail-5-solutions-that-work/index.html">
-            <div class="card-photo"><img src="assets/covers/laptop.jpg" srcset="assets/covers/laptop-640.jpg 640w, assets/covers/laptop.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/why-browser-notifications-fail-5-solutions-that-work.jpg" srcset="assets/v4/why-browser-notifications-fail-5-solutions-that-work-640.jpg 640w, assets/v4/why-browser-notifications-fail-5-solutions-that-work.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">How-to guides</span><time datetime="2026-04-06">Apr 6, 2026</time></p>
               <h3>Why Browser Notifications Fail? 5 Solutions That Work</h3>
@@ -419,7 +423,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Lead generation|Platform comparisons">
           <a class="card-link" href="enrollhere-review-pricing-call-quality-best-alternative-allcalls/index.html">
-            <div class="card-photo"><img src="assets/v3/story-5.jpg" srcset="assets/v3/story-5-640.jpg 640w, assets/v3/story-5.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/enrollhere-review-pricing-call-quality-best-alternative-allcalls.jpg" srcset="assets/v4/enrollhere-review-pricing-call-quality-best-alternative-allcalls-640.jpg 640w, assets/v4/enrollhere-review-pricing-call-quality-best-alternative-allcalls.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Lead generation</span><time datetime="2026-04-03">Apr 3, 2026</time></p>
               <h3>EnrollHere Review: Pricing, Call Quality &amp; Best Alternative (AllCalls)</h3>
@@ -459,7 +463,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Insurance sales|Lead generation">
           <a class="card-link" href="25-inbound-vs-outbound-insurance-lead-statistics-for-2026/index.html">
-            <div class="card-photo"><img src="assets/v3/story-7.jpg" srcset="assets/v3/story-7-640.jpg 640w, assets/v3/story-7.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/25-inbound-vs-outbound-insurance-lead-statistics-for-2026.jpg" srcset="assets/v4/25-inbound-vs-outbound-insurance-lead-statistics-for-2026-640.jpg 640w, assets/v4/25-inbound-vs-outbound-insurance-lead-statistics-for-2026.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Insurance sales</span><time datetime="2026-03-30">Mar 30, 2026</time></p>
               <h3>25+ Inbound vs. Outbound Insurance Lead Statistics for 2026</h3>
@@ -489,7 +493,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Medicare &amp; ACA|Lead generation">
           <a class="card-link" href="is-inbound-aca-calls-worth-it-2026-cost-benefits-and-verdict/index.html">
-            <div class="card-photo"><img src="assets/covers/small-business.jpg" srcset="assets/covers/small-business-640.jpg 640w, assets/covers/small-business.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/is-inbound-aca-calls-worth-it-2026-cost-benefits-and-verdict.jpg" srcset="assets/v4/is-inbound-aca-calls-worth-it-2026-cost-benefits-and-verdict-640.jpg 640w, assets/v4/is-inbound-aca-calls-worth-it-2026-cost-benefits-and-verdict.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Medicare &amp; ACA</span><time datetime="2026-03-22">Mar 22, 2026</time></p>
               <h3>Is Inbound ACA Calls Worth It? 2026 Cost, Benefits, and Verdict</h3>
@@ -499,7 +503,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Insurance sales|Lead generation|Platform comparisons">
           <a class="card-link" href="best-lead-sources-for-part-time-insurance-agents-5-top-picks-2026/index.html">
-            <div class="card-photo"><img src="assets/insurance-agent.jpg" srcset="assets/insurance-agent-640.jpg 640w, assets/insurance-agent.jpg 1050w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1050" height="948" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/best-lead-sources-for-part-time-insurance-agents-5-top-picks-2026.jpg" srcset="assets/v4/best-lead-sources-for-part-time-insurance-agents-5-top-picks-2026-640.jpg 640w, assets/v4/best-lead-sources-for-part-time-insurance-agents-5-top-picks-2026.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Insurance sales</span><time datetime="2026-03-22">Mar 22, 2026</time></p>
               <h3>Best Lead Sources for Part-Time Insurance Agents: 5 Top Picks 2026</h3>
@@ -539,7 +543,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Platform comparisons">
           <a class="card-link" href="allcalls-vs-ringba/index.html">
-            <div class="card-photo"><img src="assets/covers/routing-operations.jpg" srcset="assets/covers/routing-operations-640.jpg 640w, assets/covers/routing-operations.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="1300" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/allcalls-vs-ringba.jpg" srcset="assets/v4/allcalls-vs-ringba-640.jpg 640w, assets/v4/allcalls-vs-ringba.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Platform comparisons</span><time datetime="2026-03-11">Mar 11, 2026</time></p>
               <h3>AllCalls.io vs. Ringba: Which Inbound Call Platform Is Better for Insurance Agents? 2026</h3>
@@ -549,7 +553,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Lead generation|Platform comparisons">
           <a class="card-link" href="inbound-consumer-calls-vs-warm-transfers-which-lead-type-is-better-for-insurance/index.html">
-            <div class="card-photo"><img src="assets/v3/story-8.jpg" srcset="assets/v3/story-8-640.jpg 640w, assets/v3/story-8.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/inbound-consumer-calls-vs-warm-transfers-which-lead-type-is-better-for-insurance.jpg" srcset="assets/v4/inbound-consumer-calls-vs-warm-transfers-which-lead-type-is-better-for-insurance-640.jpg 640w, assets/v4/inbound-consumer-calls-vs-warm-transfers-which-lead-type-is-better-for-insurance.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Lead generation</span><time datetime="2026-03-11">Mar 11, 2026</time></p>
               <h3>Inbound Consumer Calls vs. Warm Transfers: Which Lead Type Is Better for Insurance Conversions? 2026</h3>
@@ -609,7 +613,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="How-to guides">
           <a class="card-link" href="inbound-insurance-lead-generation-guide/index.html">
-            <div class="card-photo"><img src="assets/covers/team-table.jpg" srcset="assets/covers/team-table-640.jpg 640w, assets/covers/team-table.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="961" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/inbound-insurance-lead-generation-guide.jpg" srcset="assets/v4/inbound-insurance-lead-generation-guide-640.jpg 640w, assets/v4/inbound-insurance-lead-generation-guide.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">How-to guides</span><time datetime="2026-03-09">Mar 9, 2026</time></p>
               <h3>The Complete Guide to Inbound Insurance Lead Generation for Modern Agents in 2026: Everything You Need to Know</h3>
@@ -669,7 +673,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Lead generation|Platform comparisons">
           <a class="card-link" href="best-lead-generation-platforms-for-medicare-advantage-5-top-picks-2026/index.html">
-            <div class="card-photo"><img src="assets/covers/coastal-walk.jpg" srcset="assets/covers/coastal-walk-640.jpg 640w, assets/covers/coastal-walk.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="954" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/best-lead-generation-platforms-for-medicare-advantage-5-top-picks-2026.jpg" srcset="assets/v4/best-lead-generation-platforms-for-medicare-advantage-5-top-picks-2026-640.jpg 640w, assets/v4/best-lead-generation-platforms-for-medicare-advantage-5-top-picks-2026.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Lead generation</span><time datetime="2026-02-22">Feb 22, 2026</time></p>
               <h3>Best Lead Generation Platforms for Medicare Advantage: 5 Top Picks 2026</h3>
@@ -699,7 +703,7 @@ gtag("config", "GT-5DDM24S");
         </li>
         <li class="card" data-topics="Lead generation|Platform comparisons">
           <a class="card-link" href="best-crm-integrations-for-insurance-agents-5-top-picks-2026/index.html">
-            <div class="card-photo"><img src="assets/covers/contacts.jpg" srcset="assets/covers/contacts-640.jpg 640w, assets/covers/contacts.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
+            <div class="card-photo"><img src="assets/v4/best-crm-integrations-for-insurance-agents-5-top-picks-2026.jpg" srcset="assets/v4/best-crm-integrations-for-insurance-agents-5-top-picks-2026-640.jpg 640w, assets/v4/best-crm-integrations-for-insurance-agents-5-top-picks-2026.jpg 1440w" sizes="(max-width: 528px) 92vw, (max-width: 976px) 46vw, 405px" alt="" width="1440" height="960" loading="lazy" decoding="async"></div>
             <div class="card-copy">
               <p class="card-meta"><span class="card-topic">Lead generation</span><time datetime="2026-02-22">Feb 22, 2026</time></p>
               <h3>Best CRM Integrations for Insurance Agents: 5 Top Picks 2026</h3>
