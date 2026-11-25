@@ -66,6 +66,8 @@ if (filters) {
   const topic = filters.querySelector('select');
   const resultCount = filters.querySelector('.results-count');
   const emptyMessage = document.querySelector('.no-results');
+  const archivePeriod = document.querySelector('.archive-period');
+  const februaryCards = Array.from(document.querySelectorAll('[data-february-archive]'));
   const cards = Array.from(document.querySelectorAll('.card')).map((node) => ({
     node,
     topics: node.dataset.topics.split('|'),
@@ -83,6 +85,7 @@ if (filters) {
     });
     resultCount.textContent = `${visible} of ${cards.length} articles`;
     emptyMessage.hidden = visible !== 0;
+    if (archivePeriod) archivePeriod.hidden = februaryCards.every((card) => card.hidden);
   }
 
   filters.addEventListener('submit', (event) => event.preventDefault());
