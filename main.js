@@ -43,6 +43,8 @@ if (track && carouselControls) {
   }
 
   track.dataset.enhanced = '';
+  const startingSlide = slides[1] ?? slides[0];
+  track.scrollTo({ left: startingSlide.offsetLeft - slides[0].offsetLeft, behavior: 'instant' });
   newer.addEventListener('click', () => shiftCarousel(-1));
   older.addEventListener('click', () => shiftCarousel(1));
   track.addEventListener('keydown', (event) => {
