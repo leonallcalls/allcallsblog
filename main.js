@@ -18,9 +18,9 @@ if (track && carouselControls) {
     current = next;
     newer.setAttribute('aria-disabled', String(current === 0));
     older.setAttribute('aria-disabled', String(current === slides.length - 1));
-    position.textContent = `Story ${current + 1} of ${slides.length}`;
+    position.textContent = `Latest ${current + 1} / ${slides.length}`;
     const headline = slides[current].querySelector('.feature-title').textContent;
-    announcement.textContent = `${position.textContent}. ${headline}`;
+    announcement.textContent = `Story ${current + 1} of ${slides.length}. ${headline}`;
 
     slides.forEach((slide, index) => {
       const active = index === current;
